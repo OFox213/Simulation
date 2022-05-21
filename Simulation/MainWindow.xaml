@@ -4,9 +4,52 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simulation"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1200">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="20,20,0,0" TextWrapping="Wrap" Text="에너지 절약, IoT 시뮬레이션" VerticalAlignment="Top" FontSize="30"/>
+
+        <TextBlock Text="표현하기 위함이므로실제 전력량과는 차이가 있음" FontSize="18" Margin="0,0,0,0" Foreground="Red" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Image HorizontalAlignment="Left" Height="396" Margin="320,155,0,0" VerticalAlignment="Top" Width="646" Source="/Resource/house.jpg" Stretch="Uniform"/>
+        <WrapPanel HorizontalAlignment="Left">
+            <StackPanel Margin="30,90,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+
+                <WrapPanel Margin="0,10,0,0" >
+                    <TextBlock FontSize="20" Text="온도" Margin="0,0,10,0"/>
+                    <TextBox  Name="TempTextbox" />
+                </WrapPanel>
+                <WrapPanel Margin="0,10,0,0" >
+                    <TextBlock FontSize="20" Text="습도" Margin="0,0,10,0"/>
+                    <TextBox   Name="HumiTextbox"/>
+                </WrapPanel>
+                <WrapPanel Margin="0,10,0,0" >
+                    <TextBlock  FontSize="20" Text="미세먼지 농도" Margin="0,0,10,0"/>
+                    <TextBox Name="DustTextbox"/>
+                </WrapPanel>
+                <Button Click="Button_Click" Content="적용" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="30,90,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+                <TextBlock Name="humiDevice" Text="가습기 중지" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+                <TextBlock Name="dehumiDevice" Text="제습기 중지" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+                <TextBlock Name="dustDevice" Text="공기청정기 중지" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+                <TextBlock Name="winDevice" Text="창문 닫힘" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+                <TextBlock Name="airDevice" Text="에어컨 중지" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+                <TextBlock Name="Device" Text="히터 중지" FontSize="25" FontWeight="Bold" Foreground="#FFFF4D4D"/>
+            </StackPanel>
+        </WrapPanel>
+
+        <StackPanel HorizontalAlignment="Right" Margin="0,90,20,0">
+            <TextBlock Text="현재 이 집의.." FontSize="30"/>
+            <TextBlock Name="currentTempText" Text="온도" FontSize="18"/>
+            <TextBlock Name="currentHumiText" Text="습도" FontSize="18"/>
+            <TextBlock Name="currentDustText" Text="미세먼지 농도" FontSize="18"/>
+            <TextBlock Name="currentElectText" Text="총 전력사용량" FontSize="18" Margin="0,50,0,0"/>
+            <TextBlock Name="currentElectText2" Text="한달 예상사용량" FontSize="18" Margin="0,00,0,0"/>
+            <TextBlock Name="runtime" Text="실행 시간" FontSize="18"/>
+
+
+        </StackPanel>
     </Grid>
 </Window>
