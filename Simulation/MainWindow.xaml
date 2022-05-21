@@ -11,7 +11,8 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="20,20,0,0" TextWrapping="Wrap" Text="에너지 절약, IoT 시뮬레이션" VerticalAlignment="Top" FontSize="30"/>
 
-        <TextBlock Text="표현하기 위함이므로실제 전력량과는 차이가 있음" FontSize="18" Margin="0,0,0,0" Foreground="Red" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBlock Text="개발자 Github : https://github.com/OFox213" FontSize="18" Margin="0,0,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <TextBlock Text="표현하기 위함이므로 실제 전력량과는 차이가 있음" FontSize="18" Margin="0,0,0,0" Foreground="Red" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
         <Image HorizontalAlignment="Left" Height="396" Margin="320,155,0,0" VerticalAlignment="Top" Width="646" Source="/Resource/house.jpg" Stretch="Uniform"/>
         <WrapPanel HorizontalAlignment="Left">
             <StackPanel Margin="30,90,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Left">
